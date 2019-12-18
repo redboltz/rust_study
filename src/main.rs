@@ -1,3 +1,14 @@
+fn main () {
+    let r;
+
+    {
+        let x = 5;
+        r = &x;
+    }
+
+    println!("r: {}", r);
+}
+/*
 #![allow(unused_variables)]
 fn main() {
     let r;
@@ -10,3 +21,4 @@ fn main() {
                               // --+       |
     }                         // ----------+
 }
+*/
