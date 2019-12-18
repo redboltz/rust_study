@@ -1,3 +1,12 @@
+#![allow(unused_variables)]
 fn main() {
-    println!("Hello, world!");
+    {
+        let r;
+        let x = 5;            // ----------+-- 'b
+                              //           |
+        r = &x;               // --+-- 'a  |
+                              //   |       |
+        println!("r: {}", r); //   |       |
+                              // --+       |
+    }                         // ----------+
 }
