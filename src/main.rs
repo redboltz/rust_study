@@ -1,7 +1,7 @@
 #![allow(unused_variables)]
 fn main() {
+    let r;
     {
-        let r;
         let x = 5;            // ----------+-- 'b
                               //           |
         r = &x;               // --+-- 'a  |
