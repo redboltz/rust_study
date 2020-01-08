@@ -1,16 +1,16 @@
-fn longest<'zaa>(x: &'zaa str, y: &'zaa str) -> &'zaa str {
-    if x.len() > y.len() {
-        x
-    } else {
-        y
-    }
+struct ImportantExcerpt<'a> {
+    part: &'a str,
 }
 
 fn main() {
-    let string1 = String::from("abcd");
-    let string2 = "xyz";
-
-    let result = longest(string1.as_str(), string2);
-    // 最長の文字列は、{}です
-    println!("The longest string is {}", result);
+    // 僕をイシュマエルとお呼び。何年か前・・・
+    let novel = String::from("Call me Ishmael. Some years ago...");
+    let i;
+    {
+        let first_sentence = novel.split('.')
+            .next()
+            .expect("Could not find a '.'");  // '.'が見つかりませんでした
+        i = ImportantExcerpt { part: first_sentence };
+    }
+    println!("{}", i.part);
 }
