@@ -2,7 +2,7 @@ use std::fmt::Display;
 use std::fmt::Result;
 use std::fmt::Formatter;
 
-#[derive(Debug)]
+#[derive(PartialEqDebug)]
 struct My {
     m1: i32,
     m2: i32,
