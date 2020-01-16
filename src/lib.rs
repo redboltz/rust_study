@@ -2,7 +2,7 @@ use std::fmt::Display;
 use std::fmt::Result;
 use std::fmt::Formatter;
 
-#[derive(PartialEqDebug)]
+#[derive(PartialEq, Debug)]
 struct My {
     m1: i32,
     m2: i32,
@@ -14,11 +14,12 @@ impl Display for My {
     }
 }
 
+/*
 fn main() {
     let my1 = My{m1: 12, m2: 34};
     println!("{}", my1);
 }
-
+*/
 
 #[cfg(test)]
 mod tests {
